@@ -20,12 +20,12 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 
 app.get('/',(req, res) =>{
-    res.send('welcome');    
-    /*
+    //res.send('welcome');    
+    
            workModels.User.find((err,Users)=>{
                res.render('index',{workList: madeWork})
           });
-    */
+    
 
 });
 
