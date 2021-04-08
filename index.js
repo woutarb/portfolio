@@ -30,5 +30,5 @@ app.get('/',(req, res) =>{
 });
 
 app.listen(port, ()=>{
-    console.log(`Beermatching app listening on port ${port}!`);
+    console.log(`Portfolio app listening on port ${port}!`);
 });
