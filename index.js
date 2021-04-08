@@ -21,10 +21,9 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 app.get('/',(req, res) =>{
     //res.send('welcome');    
-    
-           workModels.User.find((err,Users)=>{
-               res.render('index',{workList: madeWork})
-          });
+    workModels.Work.find((err,madeWork)=>{
+        res.render('index',{workList: madeWork})
+    });
     
 
 });
