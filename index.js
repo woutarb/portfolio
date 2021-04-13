@@ -21,7 +21,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
 app.use((req, res, next) => {
-    if (req.params.code == "favicon.ico") req.params.code = null;
+    if (req.params.id == "favicon.ico") req.params.id = null;
     next();
 })
 
@@ -37,14 +37,11 @@ app.listen(port, ()=>{
 });
 
 app.get('/:id',(req, res) =>{
-    /*
-    workModels.Work.find({})
+    workModels.Work.findOne({})
     .where('_id').equals(req.params.id)
     .exec().then((madeWork, err)=>{
         console.log(madeWork);
-        console.log(err);
-        res.render('madeWork',{workList: madeWork})
+        res.render('madeWork',{madeWork: madeWork})
     })
-*/
-    console.log(req.params);
+
 });
