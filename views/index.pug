@@ -5,8 +5,9 @@ block main
         .worksListed
             each madeWork in workList 
                 .work 
-                    h2 #{madeWork.name}
-                    h3 #{madeWork.year} 
-                    h3 #{madeWork.subject}
+                    a(href= madeWork._id)
+                        h2 #{madeWork.name}
+                        h3 #{madeWork.year} 
+                        h3 #{madeWork.subject}
             else 
                 .oh-no You have no work to see! Maybe something went wrong?

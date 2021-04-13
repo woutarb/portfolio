@@ -3,6 +3,8 @@ const pug = require('pug');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const workModels = require('./models/workMade');
+const path = require('path');
+const { connect } = require('http2');
 
 const app = express();
 const port = process.env.PORT;
@@ -18,16 +20,31 @@ mongoose.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: t
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
+app.use((req, res, next) => {
+    if (req.params.code == "favicon.ico") req.params.code = null;
+    next();
+})
 
 app.get('/',(req, res) =>{
     //res.send('welcome');    
     workModels.Work.find((err,madeWork)=>{
         res.render('index',{workList: madeWork})
     });
-    
-
 });
 
 app.listen(port, ()=>{
     console.log(`Portfolio app listening on port ${port}!`);
+});
+
+app.get('/:id',(req, res) =>{
+    /*
+    workModels.Work.find({})
+    .where('_id').equals(req.params.id)
+    .exec().then((madeWork, err)=>{
+        console.log(madeWork);
+        console.log(err);
+        res.render('madeWork',{workList: madeWork})
+    })
+*/
+    console.log(req.params);
 });
