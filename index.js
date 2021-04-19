@@ -9,6 +9,7 @@ const { connect } = require('http2');
 const app = express();
 const port = process.env.PORT;
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'pug')
 
@@ -40,8 +41,31 @@ app.get('/:id',(req, res) =>{
     workModels.Work.findOne({})
     .where('_id').equals(req.params.id)
     .exec().then((madeWork, err)=>{
-        console.log(madeWork);
         res.render('madeWork',{madeWork: madeWork})
     })
 
 });
+/*
+app.post('/', (req, res) => {
+    const array =[]
+    
+    for(let i=0; i<array.length; i++){
+        let portfolio={
+            name: array[i].name,
+            year: array[i].year,
+            subject: array[i].subject,
+            description: array[i].description,
+            path: array[i].path
+        }  
+        const model = new workModels.Work(portfolio);
+        model.save(function(err, portfolio){
+            if(err){
+                console.log(err); 
+                return;
+            } 
+            res.redirect('/');
+        })
+    }
+    console.log('done!')
+})
+*/
