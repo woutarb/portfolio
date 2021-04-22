@@ -37,7 +37,7 @@ app.listen(port, ()=>{
     console.log(`Portfolio app listening on port ${port}!`);
 });
 
-app.get('/:id',(req, res) =>{
+app.get('/work/:id',(req, res) =>{
     workModels.Work.findOne({})
     .where('_id').equals(req.params.id)
     .exec().then((madeWork, err)=>{
@@ -69,3 +69,11 @@ app.post('/', (req, res) => {
     console.log('done!')
 })
 */
+
+app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: err
+    });
+});

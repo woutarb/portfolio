@@ -5,8 +5,9 @@ block main
         .worksListed
             each madeWork in workList 
                 .work 
-                    a(href= madeWork._id)
+                    a(href= 'work/' + madeWork._id)
                         h2 #{madeWork.name}
+                        img(src= 'work/' + madeWork.path +'/1.png')  
                         h3 #{madeWork.year} 
                         h3 #{madeWork.subject}
             else 
