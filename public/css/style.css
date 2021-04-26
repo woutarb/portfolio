@@ -1,10 +1,16 @@
+body{
+    margin:0;
+}
 .worksListed{
     text-align: -webkit-center;
 }
 .work{
     text-align: -webkit-center;
     width: 20em;
-    margin-bottom: 1.5em;
+    margin: 1.5em;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.14);
+-webkit-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.14);
+-moz-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.14);
 }
 h1, h2{
     width: fit-content;
@@ -22,8 +28,7 @@ a{
 .work a img{
     width:10em;
     display: block;
-    height: 10em;
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    height: 12em;
 }
 
 ul img{
@@ -40,7 +45,23 @@ ul{
     padding-inline-start: 0px;
 }
 
+footer{
+    width: 99%;
+    align-items: center;
+    background-color: grey;
+    color: white;
+    display: flex;
+    height: 5em;
+}
 
+footer a{
+    text-align-last: center;
+}
+
+footer a img{
+    height: 50%;
+    width: 50%;
+}
 
 @media only screen and (min-width: 1000px) {
     ul img{
