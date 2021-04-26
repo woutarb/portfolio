@@ -25,9 +25,10 @@ app.use((req, res, next) => {
     if (req.params.id == "favicon.ico") req.params.id = null;
     next();
 })
-
+app.get('/home',(req, res) =>{
+    res.redirect('/')
+});
 app.get('/',(req, res) =>{
-    //res.send('welcome');    
     workModels.Work.find((err,madeWork)=>{
         res.render('index',{workList: madeWork})
     });

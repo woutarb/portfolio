@@ -1,18 +1,20 @@
 @font-face {
-    font-family: titleFont;
+    font-family: 'titleFont';
     src: url(fonts/grenzegotisch-variablefont_wght.tff) format('truetype');
     font-display: optional;    
 }
 @font-face {
-    font-family: pageFont;
+    font-family: 'pageFont';
     src: url(fonts/merriweather-regular.ttf) format('truetype');
     font-display: optional;
 }
 .title{
-    font-family: 'titleFont';
+    font-family: 'titleFont', 'Grenze Gotisch', 'Courier New';
 }
 body{
     margin:0;
+    font-family: 'pageFont', 'Merriweather', 'Arial';
+
 }
 .worksListed{
     text-align: -webkit-center;
