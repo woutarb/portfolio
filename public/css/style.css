@@ -1,16 +1,30 @@
+@font-face {
+    font-family: titleFont;
+    src: url(fonts/grenzegotisch-variablefont_wght.tff) format('truetype');
+    font-display: optional;    
+}
+@font-face {
+    font-family: pageFont;
+    src: url(fonts/merriweather-regular.ttf) format('truetype');
+    font-display: optional;
+}
+.title{
+    font-family: 'titleFont';
+}
 body{
     margin:0;
 }
 .worksListed{
     text-align: -webkit-center;
+    place-content: center;
 }
 .work{
     text-align: -webkit-center;
     width: 20em;
     margin: 1.5em;
     box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.14);
--webkit-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.14);
--moz-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.14);
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.14);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.14);
 }
 h1, h2{
     width: fit-content;
@@ -23,6 +37,7 @@ h3{
 
 a{
     text-decoration: none;
+    color:black;
 }
 
 .work a img{
@@ -46,7 +61,7 @@ ul{
 }
 
 footer{
-    width: 99%;
+    justify-content: center;
     align-items: center;
     background-color: grey;
     color: white;
@@ -63,6 +78,10 @@ footer a img{
     width: 50%;
 }
 
+.workMade h2{
+    display: flex;
+}
+
 @media only screen and (min-width: 1000px) {
     ul img{
         width:25%;
@@ -71,5 +90,10 @@ footer a img{
     } 
     .worksListed{
         display: flex;
+        flex-wrap: wrap;
+    }
+    .work{
+        width:30%; 
+        margin: 1%;
     }
 }
