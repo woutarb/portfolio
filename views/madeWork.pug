@@ -3,11 +3,13 @@ extends templates/layout
 block main 
     main 
         .workListed
-                .workMade 
-                    h1 #{madeWork.name}
-                    h2 #{madeWork.year} 
-                    h2 #{madeWork.subject}
-                    p  #{madeWork.description} 
+                .workMade
+                    .workMadeTags
+                        h1 #{madeWork.name}
+                        h2 #{madeWork.year} 
+                        h2 #{madeWork.subject}
+                    .description
+                        p  #{madeWork.description} 
                     ul
                         img(src= madeWork.path +'/1.png')  
                         img(src= madeWork.path +'/2.png') 
