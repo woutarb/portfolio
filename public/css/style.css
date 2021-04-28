@@ -28,6 +28,25 @@ header .title{
     text-decoration-color: #170000;
 }
 
+.introduction p:first-of-type{
+    font-size: 2em;
+}
+
+.introduction p{
+    margin: 0.1em;
+    margin-top: 1em;
+    white-space: pre-line;
+}
+.introduction p:last-of-type{
+    text-align: center;
+}
+
+.introduction h2{
+    color: #5D5761;
+    width: 100%;
+    text-align: -webkit-center;
+}
+
 .worksListed, .workListed{
     text-align: -webkit-center;
     place-content: center;
@@ -89,6 +108,7 @@ footer{
     color: #fff;
     display: flex;
     height: 5em;
+    margin-top: 20vh;
 }
 
 footer a{
@@ -107,7 +127,7 @@ footer a img{
 }
 
 footer p{
-    margin: 30%
+    margin: 10%
 }
 
 .workMadeTags{
@@ -136,6 +156,9 @@ footer p{
     .work{
         width:45%; 
         margin: 1%;
+    }
+    footer p{
+        margin: 30%;
     }
 }
 
