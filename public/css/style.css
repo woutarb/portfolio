@@ -1,17 +1,6 @@
-@font-face {
-    font-family: 'titleFont';
-    src: url(fonts/grenzegotisch-variablefont_wght.tff) format('truetype');
-    font-display: optional;    
-}
-@font-face {
-    font-family: 'pageFont';
-    src: url(fonts/merriweather-regular.ttf) format('truetype');
-    font-display: optional;
-}
-
 body{
     margin:0;
-    font-family: 'pageFont', 'Merriweather', 'Arial';
+    font-family: 'Merriweather', 'Arial';
     width: 100%;
 }
 
