@@ -1,7 +1,14 @@
+html{
+    overflow: hidden;
+}
+head{
+    overflow: hidden;
+}
 body{
     margin:0;
     font-family: 'Merriweather', 'Arial';
     width: 100%;
+    overflow: hidden;
 }
 
 header{
@@ -126,7 +133,7 @@ footer p{
 
 @media only screen and (min-width: 1000px) {
     header{
-        padding: 0.5em;
+        margin: 0.5em;
     }
     ul{
         display: flex;
@@ -152,7 +159,7 @@ footer p{
 
 @media only screen and (min-width: 2000px) {
     header{
-        padding: 0.5em;
+        margin: 0.5em;
     }
     ul img{
         width:24%;
@@ -171,7 +178,7 @@ footer p{
 
 @media only screen and (min-width: 3000px) {
     header{
-        padding: 0.5em;
+        margin: 0.5em;
     }
     ul img{
         width:24%;
