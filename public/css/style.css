@@ -1,14 +1,7 @@
-html{
-    overflow: hidden;
-}
-head{
-    overflow: hidden;
-}
 body{
     margin:0;
     font-family: 'Merriweather', 'Arial';
     width: 100%;
-    overflow: hidden;
 }
 
 header{
